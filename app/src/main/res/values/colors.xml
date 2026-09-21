@@ -1,0 +1,9 @@
+<resources>
+    <color name="bg_black">#0A0A0F</color>
+    <color name="bg_panel">#15151F</color>
+    <color name="accent_gold">#D4AF37</color>
+    <color name="accent_red">#C0102A</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#9A9AAB</color>
+    <color name="online_green">#3ECF6B</color>
+    <color name="offline_gray">#6B6B78</color>

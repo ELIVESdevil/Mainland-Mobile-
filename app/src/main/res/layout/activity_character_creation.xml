@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_black">
+
+    <ImageView
+        android:id="@+id/bgCharCreate"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/bg_login"
+        android:alpha="0.55"
+        android:contentDescription="@null" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#66000000" />
+
+    <TextView
+        android:id="@+id/tvCcTitle"
+        android:layout_width="0dp" android:layout_height="wrap_content"
+        android:text="@string/cc_title" android:textColor="@color/accent_gold"
+        android:textStyle="bold" android:textSize="20sp" android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:layout_width="0dp" android:layout_height="wrap_content"
+        android:text="@string/cc_subtitle" android:textColor="@color/text_secondary"
+        android:textSize="12sp" android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/tvCcTitle" android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent" />
+
+    <View
+        android:id="@+id/ccPanel"
+        android:layout_width="320dp" android:layout_height="wrap_content"
+        android:background="@drawable/shape_scrim_panel"
+        app:layout_constraintTop_toBottomOf="@id/tvCcTitle" android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="20dp" />
+
+    <LinearLayout
+        android:layout_width="0dp" android:layout_height="0dp"
+        android:orientation="vertical" android:gravity="center" android:padding="18dp"
+        app:layout_constraintTop_toTopOf="@id/ccPanel" app:layout_constraintBottom_toBottomOf="@id/ccPanel"
+        app:layout_constraintStart_toStartOf="@id/ccPanel" app:layout_constraintEnd_toEndOf="@id/ccPanel">
+
+        <EditText
+            android:id="@+id/etFirstName"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="@string/cc_first_name" android:textColorHint="@color/text_secondary"
+            android:textColor="@color/text_primary" android:inputType="textPersonName" android:maxLength="16"
+            android:padding="9dp" android:background="@drawable/shape_input_gold" />
+
+        <EditText
+            android:id="@+id/etLastName"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/cc_last_name" android:textColorHint="@color/text_secondary"
+            android:textColor="@color/text_primary" android:inputType="textPersonName" android:maxLength="16"
+            android:padding="9dp" android:background="@drawable/shape_input_gold" />
+
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/btnGenderMale"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:text="@string/cc_male" android:textSize="12sp"
+                android:background="@drawable/shape_button_gold" android:textColor="@color/bg_black" />
+
+            <Button
+                android:id="@+id/btnGenderFemale"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:text="@string/cc_female" android:textSize="12sp"
+                android:background="@drawable/shape_input_gold" android:textColor="@color/text_primary" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnEnterWorld"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="14dp" android:text="@string/btn_enter_world"
+            android:textColor="@color/bg_black" android:textStyle="bold"
+            android:background="@drawable/shape_button_gold" />
+
+        <TextView
+            android:id="@+id/tvCcError"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/accent_red" android:gravity="center" android:visibility="gone" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
