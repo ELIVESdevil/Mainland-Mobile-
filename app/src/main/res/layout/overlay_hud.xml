@@ -26,6 +26,12 @@
             android:layout_gravity="end" android:padding="6dp"
             android:text="✖ collapse" android:textColor="@color/text_secondary" android:textSize="11sp" />
 
+        <TextView
+            android:id="@+id/btnHudStop"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="end" android:padding="6dp"
+            android:text="🛑 stop HUD" android:textColor="@color/accent_red" android:textSize="11sp" />
+
     </LinearLayout>
 
 </FrameLayout>

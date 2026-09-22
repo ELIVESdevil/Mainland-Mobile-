@@ -97,6 +97,7 @@ class HudOverlayService : Service() {
         val toggle = view.findViewById<TextView>(R.id.btnHudToggle)
         val expanded = view.findViewById<View>(R.id.hudExpanded)
         val close = view.findViewById<TextView>(R.id.btnHudClose)
+        val stop = view.findViewById<TextView>(R.id.btnHudStop)
         val grid = view.findViewById<GridLayout>(R.id.hudGrid)
 
         glyphs.forEach { (action, glyph) ->
@@ -138,6 +139,10 @@ class HudOverlayService : Service() {
                 expanded.visibility = if (expanded.visibility == View.VISIBLE) View.GONE else View.VISIBLE
                 return true
             }
+            override fun onLongPress(e: MotionEvent) {
+                Toast.makeText(applicationContext, "Stopping HUD…", Toast.LENGTH_SHORT).show()
+                stopSelf()
+            }
         })
 
         var initialX = 0
@@ -164,6 +169,10 @@ class HudOverlayService : Service() {
         }
 
         close.setOnClickListener { expanded.visibility = View.GONE }
+        stop.setOnClickListener {
+            Toast.makeText(applicationContext, "HUD stopped", Toast.LENGTH_SHORT).show()
+            stopSelf()
+        }
     }
 
     private fun dp(value: Int): Int = (value * resources.displayMetrics.density).toInt()
