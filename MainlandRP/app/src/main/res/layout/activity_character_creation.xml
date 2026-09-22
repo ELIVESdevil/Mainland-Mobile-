@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_black">
+
+    <ImageView
+        android:id="@+id/bgCharCreate"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/bg_login"
+        android:alpha="0.55"
+        android:contentDescription="@null" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#66000000" />
+
+    <ScrollView
+        android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:gravity="center_horizontal" android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/cc_title" android:textColor="@color/accent_gold"
+                android:textStyle="bold" android:textSize="20sp" android:gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/cc_subtitle" android:textColor="@color/text_secondary"
+                android:textSize="12sp" android:gravity="center" />
+
+            <LinearLayout
+                android:layout_width="320dp" android:layout_height="wrap_content"
+                android:orientation="vertical" android:gravity="center"
+                android:layout_marginTop="32dp" android:padding="18dp"
+                android:background="@drawable/shape_scrim_panel">
+
+                <EditText
+                    android:id="@+id/etFirstName"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:hint="@string/cc_first_name" android:textColorHint="@color/text_secondary"
+                    android:textColor="@color/text_primary" android:inputType="textPersonName" android:maxLength="16"
+                    android:padding="9dp" android:background="@drawable/shape_input_gold" />
+
+                <EditText
+                    android:id="@+id/etLastName"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="@string/cc_last_name" android:textColorHint="@color/text_secondary"
+                    android:textColor="@color/text_primary" android:inputType="textPersonName" android:maxLength="16"
+                    android:padding="9dp" android:background="@drawable/shape_input_gold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:layout_marginTop="10dp">
+
+                    <Button
+                        android:id="@+id/btnGenderMale"
+                        android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="@string/cc_male" android:textSize="12sp"
+                        android:background="@drawable/shape_button_gold" android:textColor="@color/bg_black" />
+
+                    <Button
+                        android:id="@+id/btnGenderFemale"
+                        android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/cc_female" android:textSize="12sp"
+                        android:background="@drawable/shape_input_gold" android:textColor="@color/text_primary" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnEnterWorld"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp" android:text="@string/btn_enter_world"
+                    android:textColor="@color/bg_black" android:textStyle="bold"
+                    android:background="@drawable/shape_button_gold" />
+
+                <TextView
+                    android:id="@+id/tvCcError"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/accent_red" android:gravity="center" android:visibility="gone" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

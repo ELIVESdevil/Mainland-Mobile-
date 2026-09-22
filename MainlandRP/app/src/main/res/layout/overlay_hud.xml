@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/btnHudToggle"
+        android:layout_width="52dp" android:layout_height="52dp"
+        android:background="@drawable/shape_hud_button"
+        android:gravity="center" android:text="🎮" android:textSize="22sp" />
+
+    <LinearLayout
+        android:id="@+id/hudExpanded"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:orientation="vertical" android:visibility="gone"
+        android:background="@drawable/shape_scrim_panel" android:padding="8dp">
+
+        <GridLayout
+            android:id="@+id/hudGrid"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:columnCount="4" android:rowCount="4" />
+
+        <TextView
+            android:id="@+id/btnHudClose"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="end" android:padding="6dp"
+            android:text="✖ collapse" android:textColor="@color/text_secondary" android:textSize="11sp" />
+
+    </LinearLayout>
+
+</FrameLayout>
